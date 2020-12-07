@@ -41,17 +41,13 @@ vagrant up
 
 **b3:**
 ```
-ssh root@192.168.10.100
+ssh root@172.16.10.100
 ```
 
 **b4:**
 
 ```
-kubeadm init --apiserver-advertise-address=192.168.10.100 --pod-network-cidr=192.168.0.0/16
-
-//Plugin network
-//Xem chi tiết tại: https://kubernetes.io/docs/concepts/cluster-administration/addons/
-kubectl apply -f https://docs.projectcalico.org/v3.10/manifests/calico.yaml
+kubeadm init --apiserver-advertise-address=172.16.10.100 --pod-network-cidr=192.168.0.0/16
 ```
 
 **b5:**
@@ -60,6 +56,11 @@ kubectl apply -f https://docs.projectcalico.org/v3.10/manifests/calico.yaml
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+//Plugin network
+//Xem chi tiết tại: https://kubernetes.io/docs/concepts/cluster-administration/addons/
+kubectl apply -f https://docs.projectcalico.org/v3.10/manifests/calico.yaml
+
 ```
 
 **b6: Get token ở máy master để  các máy worker gia nhập**
