@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: appdemopodtwo
+  labels:
+    name: appphp
+spec:
+  containers:
+  - name: imagetest-php
+    image: tranluong/imagetest:php
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "100m"
+    ports:
+      - containerPort: 8085
