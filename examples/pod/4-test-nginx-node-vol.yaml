@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: appdemonginxnodevol
   labels:
-    name: appnginxnodevol
+    app: appnginxnodevol
 spec:
   volumes:
     - name: "voltest"

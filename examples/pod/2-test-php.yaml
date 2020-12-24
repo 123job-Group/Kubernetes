@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: appdemopodtwo
   labels:
-    name: appphp
+    app: appphp
 spec:
   containers:
   - name: imagetest-php

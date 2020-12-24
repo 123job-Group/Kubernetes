@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: appdemopodone
   labels:
-    name: appnode
+    app: appnode
 spec:
   containers:
   - name: imagetest-node

@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: appdemonginxnode
   labels:
-    name: appnginxnode
+    app: appnginxnode
 spec:
   containers:
   - name: appnodeone
